@@ -1,0 +1,15 @@
+<!DOCTYPE html> 
+<html>
+    <h2><a href="/upload_video/">UPLOAD A VIDEO</a></h2>
+    <table>
+        {% for video in object_list%}
+        <tr>
+            <td>{{ video.name}}</td>
+            <td>
+                <video src="/media/{{video.file_name}}" width="200" height="200"controls>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+</html>
